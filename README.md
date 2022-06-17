@@ -91,12 +91,12 @@ font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
 <b> Checking if a botton  on:
 ```
 if([button buttonOn:@"Button Name"]) {
-    //work
+	//work
 }
 // or
 bool check = [button buttonOn:@"Button Name"];
 if(ckeck) {
-  //work
+	//work
 }
 ```
 

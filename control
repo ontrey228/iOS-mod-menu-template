@@ -1,0 +1,9 @@
+Package: @@PACKAGENAME@@
+Name: @@APPNAME@@ mod menu
+Version: @@APPVERSION@@
+Architecture: iphoneos-arm
+Description: @@APPNAME@@ mod menu by @@USER@@!
+Maintainer: @@USER@@
+Author: @@USER@@
+Section: Tweaks
+Homepage: @@SITE@@

@@ -1,6 +1,6 @@
 # iOS template mod menu for theos!
 
-<b>Screenshot from the menu</b>
+<b>Screenshot from the menu: </b>
 
 <img src="https://media.discordapp.net/attachments/807340752140894229/987398491309506630/image.png">
 
@@ -22,7 +22,7 @@ const char *framework = "frameworkName";
 ### Using the menu:
 
 <b> Patching a offset without button: </b>
-```c
+```
 [patch 
 offset:@"0x1A64BB0" 
 value:RET];
@@ -90,7 +90,6 @@ font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
 
 <b> Checking if a botton  on:
 ```
-
 if([button buttonOn:@"Button Name"]) {
     //work
 }
@@ -99,7 +98,6 @@ bool check = [button buttonOn:@"Button Name"];
 if(ckeck) {
   //work
 }
-
 ```
 
 <b> Getting slider button value: </b>

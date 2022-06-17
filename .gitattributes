@@ -1,5 +1,5 @@
 * linguist-vendored
-*.mm linguist-vendored=false
+*.xm linguist-vendored=false
 *.m linguist-vendored=false
 *.cpp linguist-vendored=false
 *.py linguist-vendored=false

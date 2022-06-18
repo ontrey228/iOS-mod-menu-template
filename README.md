@@ -23,33 +23,19 @@ const char *framework = "frameworkName";
 
 <b> Patching a offset without button: </b>
 ```
-[patch 
-offset:@"0x1A64BB0" 
-value:RET];
+[patch offset:@"0x1A64BB0" value:RET];
 // or
-[patch 
-offset:@"0x1A64BB0" 
-byte:@"0xC0035FD6"];
+[patch offset:@"0x1A64BB0" byte:@"0xC0035FD6"];
 ```
 
 <b> Empty Button: </b>
 ```
-[button 
-buttonHeight:30 
-name:@"Developer Mode" 
-textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] 
-font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
+[button buttonHeight:30 name:@"Developer Mode" textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
 ```
 
 <b> Offset Button: </b>
 ```
-[button 
-buttonHeight:30 
-name:@"Drop Knife" 
-textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] 
-font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16] 
-offsets:@[@"0xA9BEA8", @"0xA9BEA0"] 
-bytes:@[@"0x20008052C0035FD6", @"BOOLtrue"]];
+[button buttonHeight:30 name:@"Drop Knife" textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16] offsets:@[@"0xA9BEA8", @"0xA9BEA0"] bytes:@[@"0x20008052C0035FD6", @"BOOLtrue"]];
 ```
 
 <b> Slider Button: </b>
@@ -61,9 +47,7 @@ slideMin:0
 slideMax:25 
 slideMinColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] 
 slideMaxColor:[UIColor whiteColor] 
-textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90]
-font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
-];
+textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
 ```
 
 <b> Textfield Button: </b>

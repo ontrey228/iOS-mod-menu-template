@@ -40,36 +40,17 @@ const char *framework = "frameworkName";
 
 <b> Slider Button: </b>
 ```
-[slider 
-sliderSize:40 
-name:@"Flight Altitude" 
-slideMin:0 
-slideMax:25 
-slideMinColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] 
-slideMaxColor:[UIColor whiteColor] 
-textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
+[slider sliderSize:40 name:@"Flight Altitude" slideMin:0 slideMax:25 slideMinColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] slideMaxColor:[UIColor whiteColor] textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
 ```
 
 <b> Textfield Button: </b>
 ```
-[textfield 
-textfieldSize:35 
-name:@"Custom Ammo Quantity" 
-borderWidth:1 
-borderColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] 
-textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] 
-font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
+[textfield textfieldSize:35 name:@"Custom Ammo Quantity" borderWidth:1 borderColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
 ```
 
 <b> Index Button: </b>
 ```
-[indexs 
-indexSize:35 
-name:@"Set Knife" 
-indexText:@[@"Butterfly", @"Flip Knife", @"Kunai", @"Scorpino", @"Tanto", @"Daggers"] 
-indexValues:@[@"75", @"77", @"78", @"79", @"80", @"81"] 
-textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] 
-font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
+[indexs indexSize:35 name:@"Set Knife" indexText:@[@"Butterfly", @"Flip Knife", @"Kunai", @"Scorpino", @"Tanto", @"Daggers"] indexValues:@[@"75", @"77", @"78", @"79", @"80", @"81"] textColor:[UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90] font:[UIFont fontWithName:@"ChalkboardSE-Bold" size:16]];
 ```
 
 <b> Checking if a botton  on:
@@ -104,3 +85,6 @@ bool check = [indexs expected:@"expected value" fromIndexValue:@"index name"];
 ### Credits:
 
 * [ontrey228](https://discord.gg/dC8tYryTYw)
+
+* [MJx0](https://github.com/MJx0)
+  * [KittyMemory](https://github.com/MJx0/KittyMemory)

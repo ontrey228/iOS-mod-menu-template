@@ -54,9 +54,9 @@ void setweapon(void *instance, int weapID) {
 float (*old_speedhack)(void *instance);
 float speedhack(void *instance) {
     if(instance != NULL) {
-    if([button buttonOn:@"slider"]) {
-    //use slider button ⬇️
-    return [slider valueFromSlider:@"slider"];
+        if([button buttonOn:@"slider"]) {
+        //use slider button ⬇️
+        return [slider valueFromSlider:@"slider"];
         }
     }
     return old_speedhack(instance);
@@ -70,17 +70,17 @@ void loadfunction() {
     //chams bypass
     [patch offset:@"0x1A64BB0" byte:@"0xC0035FD6"];
 
-[button buttonHeight:30 name:@"button" textColor:switchTextColor font:swithcFont];
+    [button buttonHeight:30 name:@"button" textColor:switchTextColor font:swithcFont];
 
-[button buttonHeight:30 name:@"offset" textColor:switchTextColor font:swithcFont offsets:@[@"0x1C6B6E4"] /*protected override bool CanSpawnPlayer()*/ bytes:@[@"0x20008052C0035FD6"]];
+    [button buttonHeight:30 name:@"offset" textColor:switchTextColor font:swithcFont offsets:@[@"0x1C6B6E4"] /*protected override bool CanSpawnPlayer()*/ bytes:@[@"0x20008052C0035FD6"]];
 
-[slider sliderSize:40 name:@"slider" slideMin:0 slideMax:25 slideMinColor:switchTextColor slideMaxColor:[UIColor whiteColor] textColor:switchTextColor font:swithcFont];
+    [slider sliderSize:40 name:@"slider" slideMin:0 slideMax:25 slideMinColor:switchTextColor slideMaxColor:[UIColor whiteColor] textColor:switchTextColor font:swithcFont];
 
-[textfield textfieldSize:35 name:@"textfield" borderWidth:1 borderColor:switchTextColor textColor:switchTextColor font:swithcFont];
+    [textfield textfieldSize:35 name:@"textfield" borderWidth:1 borderColor:switchTextColor textColor:switchTextColor font:swithcFont];
 
-[indexs indexSize:35 name:@"index" indexText:@[@"Butterfly", @"Flip Knife", @"Kunai", @"Scorpino", @"Tanto", @"Daggers"] indexValues:@[@"75", @"77", @"78", @"79", @"80", @"81"] textColor:switchTextColor font:swithcFont];
+    [indexs indexSize:35 name:@"index" indexText:@[@"Butterfly", @"Flip Knife", @"Kunai", @"Scorpino", @"Tanto", @"Daggers"] indexValues:@[@"75", @"77", @"78", @"79", @"80", @"81"] textColor:switchTextColor font:swithcFont];
 
-[indexs indexSize:25 name:@"index2" indexText:@[@"AKR", @"M4", @"M4A1"] indexValues:@[@"akr", @"m4", @"m4a1"] textColor:switchTextColor font:swithcFont];
+    [indexs indexSize:25 name:@"index2" indexText:@[@"AKR", @"M4", @"M4A1"] indexValues:@[@"akr", @"m4", @"m4a1"] textColor:switchTextColor font:swithcFont];
 
 }
 

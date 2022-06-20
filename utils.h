@@ -17,5 +17,7 @@
 }
 
 #include <substrate.h>
+#include <mach-o/dyld.h>
+
 #define HOOK(offset, ptr, orig) MSHookFunction((void *)getAbsoluteAddress(offset), (void *)ptr, (void **)&orig)
 #define HOOK_NO_ORIG(offset, ptr) MSHookFunction((void *)getAbsoluteAddress(offset), (void *)ptr, NULL)

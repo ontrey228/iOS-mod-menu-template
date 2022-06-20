@@ -7,12 +7,9 @@
 
 #import "UIKit/UIKit.h"
 
-#import <vector>
-#import <initializer_list>
-
 @interface menu : UIView
 
-- (id)initFrameworkName:(const char *)name menuWidth:(CGFloat)menuWidth menuHeight:(CGFloat)menuHeight menuRadius:(CGFloat)menuRadius topViewColor:(UIColor *)topViewColor bottomViewColor:(UIColor *)bottomViewColor topTextColor:(UIColor *)topTextColor bottomTextColor:(UIColor *)bottomTextColor topText:(NSString *)topText bottomText:(NSString *)bottomText topFont:(UIFont *)topFont bottomFont:(UIFont *)bottomFont switchesOnColor:(UIColor *)switchesOnColor switchesOffColor:(UIColor *)switchesOffColor numberClicksToOpen:(int)numberClicksToOpen numberFingersToOpen:(int)numberFingersToOpen numberClicksToHide:(int)numberClicksToHide;
+- (id)initFrameworkName:(const char *)name menuWidth:(CGFloat)menuWidth menuHeight:(CGFloat)menuHeight menuRadius:(CGFloat)menuRadius topViewColor:(UIColor *)topViewColor bottomViewColor:(UIColor *)bottomViewColor topTextColor:(UIColor *)topTextColor bottomTextColor:(UIColor *)bottomTextColor topText:(NSString *)topText bottomText:(NSString *)bottomText topFont:(UIFont *)topFont bottomFont:(UIFont *)bottomFont switchesOnColor:(UIColor *)switchesOnColor switchesOffColor:(UIColor *)switchesOffColor numberClicksToOpen:(int)numberClicksToOpen numberFingersToOpen:(int)numberFingersToOpen numberClicksToHide:(int)numberClicksToHide openButton:(BOOL)openButton button:(NSString *)button buttonWidth:(CGFloat)buttonWidth buttonHeight:(CGFloat)buttonHeight;
 
 typedef NS_ENUM(NSInteger, ByteValues) {
 NOP,
@@ -35,6 +32,8 @@ FLOAT20,
 FLOAT25, 
 FLOAT30
 };
+
++ (BOOL)gameVersion:(NSString *)vers;
 
 @end
 

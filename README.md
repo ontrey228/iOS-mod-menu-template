@@ -2,7 +2,7 @@
 
 <b>Screenshot from the menu: </b>
 
-<img src="https://media.discordapp.net/attachments/807340752140894229/987398491309506630/image.png">
+<img src="https://media.discordapp.net/attachments/807340752140894229/988457135337771068/image.png">
 
 ## Features:
 * 5 button types:

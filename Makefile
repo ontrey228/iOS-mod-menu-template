@@ -8,7 +8,7 @@ include $(THEOS)/makefiles/common.mk
 TWEAK_NAME = @@PROJECTNAME@@
 
 @@PROJECTNAME@@_CFLAGS = -fobjc-arc
-@@PROJECTNAME@@_CCFLAGS = -std=c++11 -fno-rtti -fno-exceptions -DNDEBUG
+@@PROJECTNAME@@_CCFLAGS = -std=c++14 -fno-rtti -fno-exceptions -DNDEBUG
 
 @@PROJECTNAME@@_LDFLAGS += Menu/menu
 

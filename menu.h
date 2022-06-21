@@ -9,7 +9,7 @@
 
 @interface menu : UIView
 
-- (id)initFrameworkName:(const char *)name menuWidth:(CGFloat)menuWidth menuHeight:(CGFloat)menuHeight menuRadius:(CGFloat)menuRadius topViewColor:(UIColor *)topViewColor bottomViewColor:(UIColor *)bottomViewColor topTextColor:(UIColor *)topTextColor bottomTextColor:(UIColor *)bottomTextColor topText:(NSString *)topText bottomText:(NSString *)bottomText topFont:(UIFont *)topFont bottomFont:(UIFont *)bottomFont switchesOnColor:(UIColor *)switchesOnColor switchesOffColor:(UIColor *)switchesOffColor numberClicksToOpen:(int)numberClicksToOpen numberFingersToOpen:(int)numberFingersToOpen numberClicksToHide:(int)numberClicksToHide openButton:(BOOL)openButton button:(NSString *)button buttonWidth:(CGFloat)buttonWidth buttonHeight:(CGFloat)buttonHeight;
+- (id)initFrameworkName:(const char *)name menuWidth:(CGFloat)menuWidth menuHeight:(CGFloat)menuHeight menuRadius:(CGFloat)menuRadius shadowColor:(UIColor *)shadowColor topViewColor:(UIColor *)topViewColor bottomViewColor:(UIColor *)bottomViewColor topTextColor:(UIColor *)topTextColor bottomTextColor:(UIColor *)bottomTextColor topText:(NSString *)topText bottomText:(NSString *)bottomText topFont:(UIFont *)topFont bottomFont:(UIFont *)bottomFont switchesOnColor:(UIColor *)switchesOnColor switchesOffColor:(UIColor *)switchesOffColor numberClicksToOpen:(int)numberClicksToOpen numberFingersToOpen:(int)numberFingersToOpen numberClicksToHide:(int)numberClicksToHide openButton:(BOOL)openButton button:(NSString *)button buttonWidth:(CGFloat)buttonWidth buttonHeight:(CGFloat)buttonHeight;
 
 typedef NS_ENUM(NSInteger, ByteValues) {
 NOP,
@@ -33,7 +33,9 @@ FLOAT25,
 FLOAT30
 };
 
++ (void)category:(NSString *)name textColor:(UIColor *)textColor font:(UIFont *)font borderWidth:(float)borderWidth borderRadius:(float)borderRadius borderColor:(UIColor *)borderColor;
 + (BOOL)gameVersion:(NSString *)vers;
++ (void)setTopRed:(NSString *)setTopRed setTopGreen:(NSString *)setTopGreen setTopBlue:(NSString *)setTopBlue setBottomRed:(NSString *)setBottomRed setBottomGreen:(NSString *)setBottomGreen setBottomBlue:(NSString *)setBottomBlue;
 
 @end
 

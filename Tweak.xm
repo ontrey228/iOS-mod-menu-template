@@ -9,6 +9,8 @@ const char *framework = "UnityFramework";
 
 #include "utils.h"
 
+    UIFont *categoryFont = [UIFont fontWithName:@"ChalkboardSE-Bold" size:12];
+    UIColor *categoryTextColor = [UIColor purpleColor];
     UIFont *swithcFont = [UIFont fontWithName:@"ChalkboardSE-Bold" size:14];
     UIColor *switchTextColor = [UIColor colorWithRed:1.00 green:0.01 blue:0.01 alpha:0.90];
 
@@ -40,7 +42,7 @@ void setweapon(void *instance, int weapID) {
             weapID = 80;
         }
     if([indexs expected:@"daggers knife" fromIndexValue:@"Set Weapon"]) {
-        weapID = 81;
+            weapID = 81;
         }
     }
 
@@ -70,6 +72,10 @@ void loadfunction() {
     //chams bypass
     [patch offset:@"0x1A64BB0" byte:@"0xC0035FD6"];
 
+    [menu category:@"Game" textColor:categoryTextColor font:categoryFont borderWidth:1 borderRadius:5 borderColor:switchTextColor];
+
+    //add buttons to a category number 1 called «Game»
+
     [button buttonHeight:30 name:@"Developer Mode" textColor:switchTextColor font:swithcFont];
 
     [button buttonHeight:30 name:@"Spawn Hack" textColor:switchTextColor font:swithcFont offsets:@[@"0x1C6B6E4"] bytes:@[@"0x20008052C0035FD6"]];
@@ -79,21 +85,45 @@ void loadfunction() {
     [textfield textfieldSize:35 name:@"Set Weapon ID" borderWidth:1 borderColor:switchTextColor textColor:switchTextColor font:swithcFont];
 
     [indexs indexSize:35 name:@"Set Weapon" indexText:@[@"Butterfly", @"Flip Knife", @"Kunai", @"Scorpino", @"Tanto", @"Daggers"] indexValues:@[@"75", @"77", @"78", @"79", @"tanto knife", @"daggers knife"] textColor:switchTextColor font:swithcFont];
+
+    [menu category:@"Weapon" textColor:categoryTextColor font:categoryFont borderWidth:1 borderRadius:5 borderColor:switchTextColor];
+
+    [button buttonHeight:30 name:@"Button in category 2" textColor:switchTextColor font:swithcFont];
+
+    [menu category:@"Other" textColor:categoryTextColor font:categoryFont borderWidth:1 borderRadius:5 borderColor:switchTextColor];
+
+    [button buttonHeight:30 name:@"Button in category 3" textColor:switchTextColor font:swithcFont];
+
+    [menu category:@"Vusual" textColor:categoryTextColor font:categoryFont borderWidth:1 borderRadius:5 borderColor:switchTextColor];
+
+    [button buttonHeight:30 name:@"Button in category 4" textColor:switchTextColor font:swithcFont];
+
+    [menu category:@"Menu" textColor:categoryTextColor font:categoryFont borderWidth:1 borderRadius:5 borderColor:switchTextColor];
+
+    [button buttonHeight:30 name:@"Button in category 5" textColor:switchTextColor font:swithcFont];
+
+    [slider sliderSize:30 name:@"Menu Red" slideMin:0 slideMax:1 slideMinColor:[UIColor redColor] slideMaxColor:[UIColor whiteColor] textColor:[UIColor redColor] font:swithcFont];
+
+    [slider sliderSize:30 name:@"Menu Green" slideMin:0 slideMax:1 slideMinColor:[UIColor greenColor] slideMaxColor:[UIColor whiteColor] textColor:[UIColor greenColor] font:swithcFont];
+
+    [slider sliderSize:30 name:@"Menu Blue" slideMin:0 slideMax:1 slideMinColor:[UIColor blueColor] slideMaxColor:[UIColor whiteColor] textColor:[UIColor blueColor] font:swithcFont];
+
 }
 
 void loadmenu() {
 
 menu *cheat;
 cheat = [[menu alloc] initFrameworkName:framework
-menuWidth:250 
-menuHeight:290
+menuWidth:282
+menuHeight:300
 menuRadius:25
+shadowColor:[UIColor redColor]
 topViewColor:UIColorFromRGBA(0xFF0000, 0.70) 
 bottomViewColor:UIColorFromRGBA(0xFF0000, 0.70)
 topTextColor:UIColorFromRGB(0x00FF00) 
 bottomTextColor:UIColorFromRGB(0x00FF00)
-topText:@"template mod menu"
-bottomText:@"discord.gg/leontap"
+topText:@"@@USER@@ mod menu"
+bottomText:@"@@SITE@@"
 topFont:[UIFont fontWithName:@"ChalkboardSE-Bold" size:23]
 bottomFont:[UIFont fontWithName:@"ChalkboardSE-Bold" size:15]
 switchesOnColor:[UIColor colorWithRed:0.00 green:1.00 blue:1.00 alpha:0.60]
@@ -107,22 +137,30 @@ buttonWidth:40
 buttonHeight:60
 ];
 
+[menu setTopRed:@"Menu Red" //slider name
+setTopGreen:@"Menu Green" //slider name
+setTopBlue:@"Menu Blue" //slider name
+setBottomRed:@"Menu Red" //slider name
+setBottomGreen:@"Menu Green" //slider name
+setBottomBlue:@"Menu Blue" //slider name
+];
+
 loadfunction();
 
 }
 
 static void didFinishLaunching(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef info) {
-    timer(2) {
+timer(4) {
 /*******************************************
 
 Optionally, you can check the user's game version.  If the user has an older or newer version of the game installed, they will get an error and will not be able to use the cheat.
 
 use case:
-    if([menu gameVersion:@"version"])
+if([menu gameVersion:@"version"])
 
 *******************************************/
-    loadmenu();
-    });
+loadmenu();
+});
 }
 
 
